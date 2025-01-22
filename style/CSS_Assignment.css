@@ -1,0 +1,71 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #ece2e2;
+    color: #000000;
+}
+
+p {
+    color: rgb(226, 17, 17);
+    font-size: 14px;
+}
+
+/* Element Selector */
+h1{
+    color: rgb(11, 11, 226);
+}
+/* Class Selector */
+.highlight{
+    background-color: rgb(216, 216, 21);
+}
+/* ID Selector */
+#unique{
+    font-weight: bolder;
+    font-style: italic;
+}
+
+
+h3{
+    align-content: center;
+    color: rgb(11, 1, 1);
+    /* CSS Borders */
+    border: 2px solid rgb(108, 69, 62);
+    /* CSS Margin */
+    margin: 20px;
+    /* CSS Padding */
+    padding: 15px;
+    /* CSS width and height */
+    width: 300px;
+    height: 200px;
+}
+
+/* Nav Bar */
+.navbar {
+    background-color: #333;
+    overflow: hidden;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar h2 {
+    color: white;
+    margin: 0;
+    padding-left: 15px;
+}
+.nav-button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 0 5px;
+}
+.nav-button:hover {  
+    background-color: #0056b3;
+}
+
+
+

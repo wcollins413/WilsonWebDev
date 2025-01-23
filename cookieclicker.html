@@ -4,29 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Click Speed Game</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/style/cookieclicker.css">
 </head>
 <body>
-    <div class="navbar">
-        <h2>Wilson Collins</h2>
-        <nav>
-            <a href="../index.html" class="nav-button">Home</a>
-            <a href="../CSS_Assignment.html" class="nav-button">CSS_Assignment</a>
-            <a href="../resume.html" class="nav-button">Resume</a>
-            <a href="../hobbies.html" class="nav-button">Hobbies</a>
-            <a href="../cookieclicker.html" class="nav-button">Cookie Clicker Game</a>
-            <a href="../researchreport.html" class="nav-button">Research Report</a>
-        </nav>
-    </div>
+    <!--Navbar-->
+    <div id="navbar-container"></div>
+
     <h1>Cookie Clicker Speed Game</h1>
+
     <!-- Start Button for the Game -->
     <button id="start-button">Start</button>
+
     <!--Game container which intially is hidden until the User clicks on start-->
     <div id="game-container" class="hide_button">
         <p>Click the Cookie as fast as you can!</p>
         <img id="click-image" src="/assets/cookie.webp" alt="Click Me">
         <p>Clicks: <span id="click-count">0</span></p>
     </div>
+
     <!--Retry Button-->
     <button id="retry-button" class="hide_button">Retry</button>
     <script>
@@ -62,5 +58,15 @@
             document.getElementById('game-container').classList.add('hide_button');
         });
     </script>
+    
+    <script> //Navbar Script
+        fetch('navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('navbar-container').innerHTML = data;
+        });
+    </script>
+    
 </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </html>

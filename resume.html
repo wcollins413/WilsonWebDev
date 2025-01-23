@@ -4,21 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wilson Collins - Resume</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/style/index.css">
 </head>
 <body style="text-align: left;"> 
-    <div class="navbar">
-        <h2>Wilson Collins</h2>
-        <nav>
-            <a href="../index.html" class="nav-button">Home</a>
-            <a href="../CSS_Assignment.html" class="nav-button">CSS Assignment</a>
-            <a href="../resume.html" class="nav-button">Resume</a>
-            <a href="../hobbies.html" class="nav-button">Hobbies</a>
-            <a href="../cookieclicker.html" class="nav-button">Cookie Clicker Game</a>
-            <a href="../researchreport.html" class="nav-button">Research Report</a>
-        </nav>
-    </div>
-
+    <div id="navbar-container"></div>
     <div class="box-container">
         <p>Duluth, GA 30096 | Phone: (770) 862-1128 | Email: <a href="mailto:wcolli5@clemson.edu">wcolli5@clemson.edu</a> | <a href="https://www.linkedin.com">LinkedIn</a></li></p> 
         
@@ -78,5 +68,15 @@
     <footer>
         <p>&copy; 2025 Wilson Collins.</p>
     </footer>
+
+    <script>
+        fetch('navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('navbar-container').innerHTML = data;
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Elements Demonstration</title>
+    <link rel="stylesheet" href="style/GroupCSS2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>CSS Elements Demonstration</h1>
+    </header>
+    <div id="navbar-container"></div>
+
+    <main>
+        <section id="box-model">
+            <h2>Box Model</h2>
+            <div class="box">This is a box model.</div>
+        </section>
+        <section id="icons">
+            <h2>Icons</h2>
+            <i class="fa-solid fa-cloud"></i>
+            <i class="fa-solid fa-heart"></i>
+            <i class="fa-solid fa-car"></i>
+            <i class="fa-solid fa-file"></i>
+            <i class="fa-solid fa-bars"></i>
+        </section>
+        <section id="lists">
+            <h2>Lists</h2>
+            <h3>Unordered List</h3>
+            <ul>
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+            </ul>
+            <h3>Ordered List</h3>
+            <ol>
+                <li>Step 1</li>
+                <li>Step 2</li>
+                <li>Step 3</li>
+            </ol>
+        </section>
+        <section id="tables">
+            <h2>Tables</h2>
+            <table>
+                <tr>
+                    <th>Title 1</th>
+                    <th>Title 2</th>
+                </tr>
+                <tr>
+                    <td>Data 1</td>
+                    <td>Data 2</td>
+                </tr>
+            </table>
+        </section>
+        <section id="layout">
+            <h2>Website Layout</h2>
+            <div class="layout-example">
+                <div class="content">This is the main content area.</div>
+                <div class="float-box">This box floats right.</div>
+            </div>
+        </section>
+        <section id="gallery">
+            <h2>Image Gallery</h2>
+            <div class="gallery">
+                <img src="assets/DogPic.jpg" alt="Image 1">
+                <img src="assets/cookie.webp" alt="Image 2">
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; Wilson Collins</p>
+    </footer>
+    <script>
+        fetch('navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('navbar-container').innerHTML = data;
+        });
+    </script>
+</body>
+</html>

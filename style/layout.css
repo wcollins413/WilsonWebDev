@@ -1,0 +1,118 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-width: 320px;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url(../assets/death_valley.jpg);
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-attachment: fixed;
+}
+
+header {
+    width: 100%;
+    background-color: #F66733;
+    padding: 10px 0;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+footer {
+    position: relative;
+    width: 100%;
+    background-color: #522D80;
+    text-align: center;
+    font-style: italic;
+    color: white;
+    padding: 10px;
+    margin-top: auto;
+}
+
+#wrapper {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    padding: 80px 20px 20px;
+    box-sizing: border-box;
+}
+
+#left_side {
+    width: 20%;
+    background-color: #F66733;
+    padding: 20px;
+    max-height: 500px;
+    overflow:hidden;
+    box-sizing: border-box;
+    color: white;
+    text-align: center;
+    order: -1; /* left_side stays on the left */
+}
+
+#left_side img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+#right_side {
+    width: 20%;
+    background-color: #522D80;
+    padding: 20px;
+    max-height: 500px;
+    box-sizing: border-box;
+    color: white;
+    
+}
+
+#content_area {
+    background-color: white;
+    flex: 1;
+    max-height: 500px; /* Adjust this value to reduce height */
+    padding: 15px; /* Reduce padding */
+    overflow: hidden;
+}
+
+h1 {
+    margin: 0;
+}
+
+#left_side ul {
+    list-style: none;
+    padding: 0;
+}
+
+#left_side li a {
+    font-size: 14pt;
+    font-weight: bold;
+    padding: 5px;
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+#left_side li a:hover {
+    background-color: #522D80;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    #wrapper {
+        flex-direction: column;
+        padding: 90px 10px 10px;
+    }
+
+    #left_side, #right_side, #content_area {
+        width: 100%;
+        padding: 15px;
+        text-align: center;
+    }
+}
